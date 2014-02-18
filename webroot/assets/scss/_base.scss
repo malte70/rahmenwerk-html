@@ -1,0 +1,20 @@
+/**
+ * clearfix
+ */
+.clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.float-right {
+	float: right;
+	&:after {
+		@extend .clearfix;
+	}
+}
+
+a:link,
+a:visited {
+	color: $fontColorSecondary;
+}

@@ -1,0 +1,48 @@
+/**
+ * Grid
+ * 
+ * A simple CSS grid
+ */
+
+/**
+ * Configuration
+ * 
+ * width: Width of the whole site
+ */
+$width: 980px;
+
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	@include box-sizing(border-box);
+}
+
+[class*='col-'] {
+	float: left;
+	padding: 10px;
+	&:last-of-type {
+		padding-right: 10px;
+		float: right;
+	}
+}
+
+.wrapper {
+	width: $width;
+	margin-left: auto;
+	margin-right: auto;
+}
+.row {
+	width: 100%;
+	&:after {
+		@extend .clearfix;
+	}
+}
+
+@for $i from 1 through 12 {
+	.col-#{$i} {
+		width: ( 100% / 12 ) * $i;
+	}
+}
+

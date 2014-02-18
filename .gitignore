@@ -1,0 +1,6 @@
+#
+# .gitignore
+#
+
+.sass-cache/
+webroot/assets/css/
