@@ -2,14 +2,9 @@
  * Grid
  * 
  * A simple CSS grid
+ * @author Malte Bublitz, https://malte-bublitz.de
+ * @license 2-clause BSD
  */
-
-/**
- * Configuration
- * 
- * width: Width of the whole site
- */
-$width: 980px;
 
 *,
 *:after,
@@ -17,6 +12,15 @@ $width: 980px;
 	margin: 0;
 	padding: 0;
 	@include box-sizing(border-box);
+}
+
+/**
+ * clearfix
+ */
+.clearfix {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 [class*='col-'] {
@@ -29,7 +33,8 @@ $width: 980px;
 }
 
 .wrapper {
-	width: $width;
+	width: 100%;
+	max-width: $width;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -40,9 +45,107 @@ $width: 980px;
 	}
 }
 
+/**
+ * Media Queries
+ */
+$media_tiny: "(max-width: #{$width_small})"; // only used for helper classes
+$media_small: "(min-width: #{$width_small}) and (max-width: #{$width_medium})";
+$media_medium: "(min-width: #{$width_medium}) and (max-width: #{$width})";
+$media_large: "(min-width: #{$width})";
+$media_retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+/**
+ * Mobile first grid
+ */
+
+/**
+ * tiny
+ * display each column at 100% width.
+ */
 @for $i from 1 through 12 {
 	.col-#{$i} {
-		width: ( 100% / 12 ) * $i;
+		width: 100%;
+	}
+	@media #{$media_tiny} {
+		.tiny-hide {
+			display: none;
+			visibility: hidden;
+		}
 	}
 }
 
+/**
+ * small
+ * display 3 columns in a row
+ */
+@media #{$media_small} {
+	@for $i from 1 through 3 {
+		.col-#{$i} {
+			width: ( 100% / 3 ) * $i;
+		}
+	}
+	@for $i from 4 through 12 {
+		.col-#{$i} {
+			width: 100%;
+		}
+	}
+	// let the user force a width for a columns for this display size
+	@for $i from 1 through 3 {
+		.small-col-#{$i} {
+			width: ( 100% / 3 ) * $i;
+		}
+	}
+	.small-hide {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+/**
+ * medium
+ * display 6 columns in a row
+ */
+@media #{$media_medium} {
+	@for $i from 1 through 6 {
+		.col-#{$i} {
+			width: ( 100% / 6 ) * $i;
+		}
+	}
+	@for $i from 7 through 12 {
+		.col-#{$i} {
+			width: 100%;
+		}
+	}
+	@for $i from 1 through 6 {
+		.medium-col-#{$i} {
+			width: (100% / 6) * $i;
+		}
+	}
+	.medium-hide {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+/**
+ * large
+ * display all 12 columns in a row
+ */
+@media #{$media_large} {
+	@for $i from 1 through 12 {
+		.col-#{$i} {
+			width: ( 100% / 12 ) * $i;
+		}
+	}
+	.wide-hide {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+.float-right {
+	float: right;
+	&:after {
+		@extend .clearfix;
+	}
+}

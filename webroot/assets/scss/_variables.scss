@@ -4,7 +4,54 @@
 
 @import "colors";
 
+/**
+ * Basic styles
+ */
+
+/**
+ * $fontColor: Basic font color
+ */
 $fontColor: $black;
+
+/**
+ * $backgroundColor: Background color for the body element
+ */
 $backgroundColor: $white;
+
+/**
+ * $fontColorSecondary: Secondary font Color, used for links and might be also used for highlight elements
+ */
 $fontColorSecondary: $red;
 
+/**
+ * $baseFontSize: Font size of the body, i.e. 1em for childs of <body>.
+ */
+$baseFontSize: 16px;
+
+/**
+ * $fontFamily***: Default font family for the three basic font types
+ * $fontFamily: Default font family for the content, should be one of $fontFamilySerif/$fontFamilySans/$fontFamilyMonospace
+ */
+$fontFamilySerif: serif;
+$fontFamilySans: sans-serif;
+$fontFamilyMonospace: 'Inconsolata-g', monospace;
+$fontFamily: sans-serif;
+
+/**
+ * Grid configuration
+ */
+
+/**
+ * width: Width of the container element .wrapper / Width of full layout (all 12 columns in a row).
+ */
+$width: 850px;
+
+/**
+ * width_medium: Lower border for Medium-size layout (tablet/smartphones in landscape orientation/six columns in a row)
+ */
+$width_medium: 600px;
+
+/**
+ * width_small: Border for smartphone layout (three columns in a row)
+ */
+$width_small: 300px;

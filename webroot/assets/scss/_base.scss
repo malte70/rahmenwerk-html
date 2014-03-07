@@ -1,20 +1,36 @@
 /**
- * clearfix
+ * Basic styles
+ *  i.e. those which should also appear in a iframe or such without any layout
  */
-.clearfix {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.float-right {
-	float: right;
-	&:after {
-		@extend .clearfix;
-	}
+body {
+	color: $fontColor;
+	background: $backgroundColor;
+	font: $baseFontSize $fontFamily;
 }
 
 a:link,
 a:visited {
 	color: $fontColorSecondary;
+}
+
+pre, code {
+	font-family: $fontFamilyMonospace;
+}
+
+/**
+ * Helpers
+ */
+$all_aligns: left center right;
+
+@each $align in $all_aligns {
+	.text-#{$align} {
+		text-align: #{$align};
+	}
+}
+
+/**
+ * Responsive images: let images not be larger than the container
+ */
+img {
+	max-width: 100%;
 }
