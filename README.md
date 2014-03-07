@@ -57,7 +57,8 @@ You can use from one to all twelve parts of a row as one column, as you can see 
 	<div class="col-12">
 		<p>A second row with only one huge column.</p>
 	</div>
-</div>```
+</div>
+```
 
 If you need to, you can force a different column width on a specific screen size, using helper classes/prefixes:
 
@@ -77,7 +78,8 @@ If you need to, you can force a different column width on a specific screen size
 	<div class="col-8 medium-col-4 small-col-2">
 		<p>Ans this one is always two third of the full width.</p>
 	</div>
-</div>```
+</div>
+```
 
 ### Wrapper
 
@@ -89,6 +91,7 @@ As you can see, I always talk about *full width* instead of *screen width*. Sinc
 		[…]
 	</div>
 	[…]
-</div>```
+</div>
+```
 
 The maximum width of the wrapper is defined in `_variables.scss`; the default is 850 pixels.
