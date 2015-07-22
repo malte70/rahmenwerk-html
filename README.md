@@ -33,7 +33,7 @@ The main elements of the grid are **rows**, **columns** and the **wrapper**.
 
 ### Rows
 
-A row contains all elements that should appear next to each other in full-width layout. (Hint: The width of a row is defined in _variables.scss, as mentioned above). A row always contains 12 columns, although on smaller screens, they might be displayed below each other (the grid is fully responsive)
+A row contains all elements that should appear next to each other in full-width layout. (Hint: The width of a row is defined in \_variables.scss, as mentioned above). A row always contains 12 columns, although on smaller screens, they might be displayed below each other (the grid is fully responsive)
 
 ### Columns
 
