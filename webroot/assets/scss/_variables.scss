@@ -32,10 +32,10 @@ $baseFontSize: 16px;
  * $fontFamily***: Default font family for the three basic font types
  * $fontFamily: Default font family for the content, should be one of $fontFamilySerif/$fontFamilySans/$fontFamilyMonospace
  */
-$fontFamilySerif: serif;
-$fontFamilySans: sans-serif;
+$fontFamilySerif: 'Source Serif Pro', serif;
+$fontFamilySans: 'Source Sans Pro', sans-serif;
 $fontFamilyMonospace: 'Inconsolata-g', monospace;
-$fontFamily: sans-serif;
+$fontFamily: $fontFamilySerif;
 
 /**
  * Grid configuration
