@@ -3,10 +3,10 @@
 #
 
 http_path = "/"
-css_dir = "webroot/assets/css"
-sass_dir = "webroot/assets/scss"
-images_dir = "images"
-javascripts_dir = "js"
+css_dir = "assets/css"
+sass_dir = "assets/scss"
+images_dir = "assets/img"
+javascripts_dir = "assets/js"
 
 # Possible values:
 #  - :expanded
