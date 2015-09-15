@@ -21,12 +21,12 @@ $backgroundColor: $white;
 /**
  * $fontColorSecondary: Secondary font Color, used for links and might be also used for highlight elements
  */
-$fontColorSecondary: $red;
+$fontColorSecondary: $green;
 
 /**
  * $baseFontSize: Font size of the body, i.e. 1em for childs of <body>.
  */
-$baseFontSize: 16px;
+$baseFontSize: 20px;
 
 /**
  * $fontFamily***: Default font family for the three basic font types
@@ -35,7 +35,7 @@ $baseFontSize: 16px;
 $fontFamilySerif: 'Source Serif Pro', serif;
 $fontFamilySans: 'Source Sans Pro', sans-serif;
 $fontFamilyMonospace: 'Inconsolata-g', monospace;
-$fontFamily: $fontFamilySerif;
+$fontFamily: $fontFamilySans;
 
 /**
  * Grid configuration
